@@ -1,6 +1,8 @@
-# SonhoRealStore: Uma simples loja demo feita em AstroJS com fins de treinamento
+# SonhoRealStore
 
-## Um modelo de site feito em AstroJS usando jsonplaceholder com fins de aprendizado, simplesmente eu to curtindo e muito o AstroJS e esse Tutorial deles é bem fácil de se entender. Durante a fase de configuração do ambiente, o astro já cuida de tudo. É muito fácil e tranquilo adicionar o React ou outras bibliotecas/frameworks, ele já configura para você. Um amor ❤️❤️.
+## Uma simples loja demo feita em AstroJS com fins de treinamento
+
+Um modelo de site feito em AstroJS usando jsonplaceholder com fins de aprendizado, simplesmente eu to curtindo e muito o AstroJS e esse Tutorial deles é bem fácil de se entender. Durante a fase de configuração do ambiente, o astro já cuida de tudo. É muito fácil e tranquilo adicionar o React ou outras bibliotecas/frameworks, ele já configura para você. Um amor ❤️❤️.
 
 ## Ajude-nos, a melhorar o site 🤩❤️
 
