@@ -1,0 +1,19 @@
+---
+import NavigationBar from "../components/NavigationBar.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Sonho Real 👑 Store">
+	<NavigationBar />
+	<p>Sobre...</p>
+</Layout>
+
+<style>
+	.store {
+		margin-top: 50px;
+		margin-bottom: 50px;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		grid-gap: 25px;
+	}
+</style>
