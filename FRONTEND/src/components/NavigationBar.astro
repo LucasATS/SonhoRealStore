@@ -6,13 +6,17 @@
 	<h1>Sonho Real 👑</h1>
 	<nav class="nav">
 		<ul class="pages">
-			<li><a href="/" title="Ir para home">🏠 Home</a></li>
+			<li>
+				<a href="/" title="Ir para home">🏠 Home</a>
+			</li>
 			<li>
 				<a href="/about" title="Ir para a página sobre">📗 Sobre</a>
 			</li>
 		</ul>
 		<ul class="menu">
-			<li><a href="/cart" title="Ir para carrinho">🛒 Carrinho</a></li>
+			<li>
+				<a href="/cart" title="Ir para carrinho">🛒 Carrinho</a>
+			</li>
 		</ul>
 	</nav>
 </header>
@@ -22,11 +26,12 @@
 		position: sticky;
 		top: -50px;
 		z-index: 10;
+		background-color: var(--background);
 	}
 
 	.nav {
 		border-radius: 8px;
-		background-color: rgb(0, 0, 0);
+		background-color: var(--color-black);
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -66,7 +71,7 @@
 	}
 
 	a {
-		color: white;
+		color: var(--principal);
 		font-size: 1rem;
 		font-weight: 500;
 		line-height: 1;

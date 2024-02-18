@@ -1,59 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import ListaProdutos from "../components/ListProductsCard.astro";
 import NavigationBar from "../components/NavigationBar.astro";
-import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Sonho Real 👑 Store">
 	<NavigationBar />
 
-	<span style="display: flex;">
-		<Card
-			image="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
-			title="https://docs.astro.build/"
-			description="https://docs.astro.build/"
-			price={12.57}
-			addToCart={() => console.log("teste")}
-		/>
-
-		<Card
-			image="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
-			title="https://docs.astro.build/"
-			description="https://docs.astro.build/"
-			price={12.57}
-			addToCart={() => console.log("teste")}
-		/>
-
-		<Card
-			image="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
-			title="https://docs.astro.build/"
-			description="https://docs.astro.build/"
-			price={12.57}
-			addToCart={() => console.log("teste")}
-		/>
-		<Card
-			image="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
-			title="https://docs.astro.build/"
-			description="https://docs.astro.build/"
-			price={12.57}
-			addToCart={() => console.log("teste")}
-		/>
-		<Card
-			image="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
-			title="https://docs.astro.build/"
-			description="https://docs.astro.build/"
-			price={12.57}
-			addToCart={() => console.log("teste")}
-		/>
-		<Card
-			image="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg"
-			title="https://docs.astro.build/"
-			description="https://docs.astro.build/"
-			price={12.57}
-			addToCart={() => console.log("teste")}
-		/>
-	</span>
-
+	<ListaProdutos category="" />
 </Layout>
 
 <style></style>
