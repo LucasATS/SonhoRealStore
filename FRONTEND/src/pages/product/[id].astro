@@ -1,0 +1,27 @@
+---
+import ListaProdutos from "../../components/ListProductsCard.astro";
+import NavigationBar from "../../components/NavigationBar.astro";
+import { type Produto } from "../../interfaces/interfaces";
+import Product from "../../components/Product.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getProduto } from "../../util/api";
+
+const { id } = Astro.params;
+
+let produtoInfo: Produto;
+produtoInfo = await getProduto(id);
+if (!produtoInfo) return Astro.redirect("/404");
+---
+
+<Layout title={"Sonho Real - " + produtoInfo?.title}>
+	<NavigationBar />
+
+	<Product produtoInfo={produtoInfo} />
+
+	<ListaProdutos
+		category={produtoInfo?.category}
+		remove_id={produtoInfo?.id}
+	/>
+</Layout>
+
+<style></style>
