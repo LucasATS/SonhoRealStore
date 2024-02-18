@@ -12,7 +12,7 @@ E é lógico, que tive que usar a API View Transitions. Coisa incrível.
 
 FEITO POR [LucasATS](https://github.com/LucasATS)
 INSPIRADO EM COISAS ALEATÓRIAS DA MINHA MENTE.
-ELEMENTOS FORAM EXTRAIDOS DE [jsonplaceholder](https://jsonplaceholder.typicode.com/) e [AstroJS tutorial](https://docs.astro.build/pt-br/tutorial/).
+ELEMENTOS FORAM EXTRAIDOS DE [fake store api](https://fakestoreapi.com/) e [AstroJS tutorial](https://docs.astro.build/pt-br/tutorial/).
 
 [![preview](./.github/preview.png)](https://sonhorealstore.vercel.app/)
 
@@ -38,12 +38,28 @@ Necessario tem NodeJS v20.11.0
 
 ## __🎯 METAS__
 
-- [X] Home (Tela store)
+- Home (Tela store)
   - [X] Menu de navegação superior
   - [X] Itens da loja
-- [X] Detalhes do produto
-- [ ] Menu Lateral Direito (menu de carrinho)
-- [ ] About
+
+- Página de detalhes do produto
+  - [X] Adicionar produto ao carrinho
+
+- Menu Lateral Direito (menu de carrinho)
+  - [X] Listar produtos
+  - [X] Criar componente dos produtos
+  - [X] Alterar quantidade e valor do produto
+  - [X] Abrir e fechar modal via comando
+  - [ ] Atualizar lista sempre que adicionar um novo item
+  - [ ] Remover produto do carrinho
+
+- Tela de About
+
+- Avisos
+  - [X] Aviso de cookies
+  - [X] Aviso de demo
+  - [ ] Adicionar integração com cookies para não exibir mais a janela
+- [ ] Implementar SEO
 
 <!--
 ## __❤ AGRADECIMENTOS__
