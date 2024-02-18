@@ -6,7 +6,7 @@ const { image, title, price, product_id, count } = Astro.props;
 	<img src={image} alt={title} />
 
 	<div class="details">
-		<h1>{title}</h1>
+		<h1 class="title">{title}</h1>
 	</div>
 	<div class="details2">
 		<p class="price">R$ {price.toFixed(2)}</p>
@@ -57,9 +57,9 @@ const { image, title, price, product_id, count } = Astro.props;
 		align-items: flex-end;
 	}
 
-	h1 {
+	.title {
 		margin: 0;
-		font-size: 15px;
+		font-size: 14px;
 		font-weight: bold;
 		color: var(--color-black);
 
