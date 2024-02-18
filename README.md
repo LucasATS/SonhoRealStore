@@ -2,7 +2,11 @@
 
 ## Uma simples loja demo feita em AstroJS com fins de treinamento
 
-Um modelo de site feito em AstroJS usando jsonplaceholder com fins de aprendizado, simplesmente eu to curtindo e muito o AstroJS e esse Tutorial deles é bem fácil de se entender. Durante a fase de configuração do ambiente, o astro já cuida de tudo. É muito fácil e tranquilo adicionar o React ou outras bibliotecas/frameworks, ele já configura para você. Um amor ❤️❤️.
+Um modelo de site feito em AstroJS usando jsonplaceholder com fins de aprendizado. Eu estou gostando muito do AstroJS. O Tutorial deles é bem fácil de se entender. Embora o projeto eu tenha feito sem tedepender do tutorial.
+
+Durante a fase de configuração do ambiente, o astro já cuida de tudo. É muito fácil e tranquilo adicionar o React ou outras bibliotecas/frameworks, ele já configura para você. Entretanto, mesmo diante da velocidade e de tantas outras ferramentas disponíveis, eu continuo dando preferencia para o NextJS. Acredito que em parte deve-se ao fato de eu estar mais acostumado com um ambiente focado em React.
+
+E é lógico, que tive que usar a API View Transitions. Coisa incrível.
 
 ## Ajude-nos, a melhorar o site 🤩❤️
 
@@ -10,9 +14,9 @@ FEITO POR [LucasATS](https://github.com/LucasATS)
 INSPIRADO EM COISAS ALEATÓRIAS DA MINHA MENTE.
 ELEMENTOS FORAM EXTRAIDOS DE [jsonplaceholder](https://jsonplaceholder.typicode.com/) e [AstroJS tutorial](https://docs.astro.build/pt-br/tutorial/).
 
-[![preview](./.github/preview.png)](https://lucasats.github.io/LINK/)
+[![preview](./.github/preview.png)](https://sonhorealstore.vercel.app/)
 
-[🔗 ACESSE O PROJETO](https://lucasats.github.io/LINK/)
+[🔗 ACESSE O PROJETO](https://sonhorealstore.vercel.app/)
 
 ## __📂 PLAY__
 
@@ -20,11 +24,13 @@ Necessario tem NodeJS v20.11.0
 
 > gitclone:
 
-    git clone <LINK DO GITCLONE>
+    git clone https://github.com/LucasATS/SonhoRealStore.git
 
 > Install:
 
     npm install
+
+    npx astro add vercel
 
 > start
 
@@ -32,11 +38,11 @@ Necessario tem NodeJS v20.11.0
 
 ## __🎯 METAS__
 
-- [ ] Home (Tela store)
-  - [ ] Menu de navegação superior
-  - [ ] Itens da loja
-  - [ ] Menu Lateral Direito (menu de carrinho)
-- [ ] Carrinho (Confirmar Compra)
+- [X] Home (Tela store)
+  - [X] Menu de navegação superior
+  - [X] Itens da loja
+- [X] Detalhes do produto
+- [ ] Menu Lateral Direito (menu de carrinho)
 - [ ] About
 
 <!--
