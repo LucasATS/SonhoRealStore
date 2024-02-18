@@ -16,7 +16,7 @@ if (!produtoInfo) return Astro.redirect("/404");
 <Layout title={"Sonho Real - " + produtoInfo?.title}>
 	<NavigationBar />
 
-	<Product produtoInfo={produtoInfo} />
+	<Product client:idle produtoInfo={produtoInfo} />
 
 	<ListaProdutos
 		category={produtoInfo?.category}
