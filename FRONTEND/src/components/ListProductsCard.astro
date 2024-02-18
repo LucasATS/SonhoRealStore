@@ -1,0 +1,67 @@
+---
+import { type Produto } from "../interfaces/interfaces";
+import { getProduto } from "../util/api";
+import Card from "./ProductCard.astro";
+
+//
+// Props
+const { category = "", remove_id = null } = Astro.props;
+const TAG = `category/${category}`;
+
+//
+// Processing
+let data = await getProduto(category === "" ? "" : TAG);
+
+let dataFiltro = [];
+if (remove_id === null) {
+	dataFiltro = data;
+} else {
+	data.map((item: Produto) => {
+		if (item?.id !== remove_id) dataFiltro.push(item);
+	});
+}
+---
+
+<span class="store">
+	{
+		dataFiltro.map((item: Produto) => (
+			<Card
+				count={item?.rating?.count}
+				product_id={item?.id}
+				image={item?.image}
+				title={item?.title}
+				price={item?.price}
+			/>
+		))
+	}
+</span>
+
+<script>
+	function getCookie(nome = "") {
+		let nomeC = nome + "=";
+		let ca = document.cookie.split(";");
+		for (let i = 0; i < ca.length; i++) {
+			let c = ca[i];
+			while (c.charAt(0) == " ") c = c.substring(1, c.length);
+			if (c.indexOf(nomeC) == 0)
+				return c.substring(nomeC.length, c.length);
+		}
+		return null;
+	}
+
+	function setCookie(nome = "", valor = "", horas = 1) {
+		let data = new Date();
+		data.setTime(data.getTime() + horas * 60 * 60 * 1000);
+		let expires = "expires=" + data.toUTCString();
+		document.cookie = nome + "=" + valor + ";" + expires + ";path=/";
+	}
+</script>
+
+<style>
+	.store {
+		margin: 50px 20px 50px 20px;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		grid-gap: 25px;
+	}
+</style>

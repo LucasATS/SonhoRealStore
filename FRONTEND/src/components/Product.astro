@@ -1,0 +1,110 @@
+---
+const { produtoInfo } = Astro.props;
+---
+
+<span class="container">
+	<span class="product-container row">
+		<div class="image">
+			<img src={produtoInfo?.image} alt={produtoInfo?.title} />
+		</div>
+
+		<div class="col">
+			<span class="row gap-12">
+				<h1 class="title">{produtoInfo?.title}</h1>
+				<p class="label">{produtoInfo?.category}</p>
+			</span>
+			<div class="details">
+				<p class="price">R$ {produtoInfo?.price.toFixed(2)}</p>
+				<span class="row gap-12">
+					<p class="label">{produtoInfo?.rating?.rate}⭐</p>
+					<p class="label">{produtoInfo?.rating?.count} vendas</p>
+				</span>
+			</div>
+			<span class="row" style="justify-content: right;">
+				<button class="addCart">Adicionar ao Carrinho</button>
+			</span>
+			<p class="description">{produtoInfo?.description}</p>
+		</div>
+	</span>
+</span>
+
+<style>
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.product-container {
+		max-width: 1000px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		background-color: var(--principal);
+		border-radius: 10px;
+		margin: 25px 0 0 0;
+		padding: 16px;
+
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.12);
+	}
+
+	.image img {
+		object-fit: contain;
+		max-width: 300px;
+		max-height: 300px;
+		margin-right: 20px;
+	}
+
+	.details {
+		gap: 12px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+
+	.title {
+		font-size: 24px;
+	}
+
+	.description {
+		text-align: justify;
+	}
+
+	p {
+		color: var(--color-black);
+		font-size: 16px;
+	}
+
+	.price,
+	.label {
+		height: 24px;
+		border-radius: 6px;
+		padding: 6px 10px;
+		font-weight: bold;
+	}
+
+	.price {
+		font-size: 25px;
+	}
+
+	.label {
+		background-color: var(--color-black);
+		color: var(--principal);
+	}
+
+	.addCart {
+		padding: 10px 20px;
+		background-color: var(--button-store);
+		color: var(--principal);
+		cursor: pointer;
+		font-weight: 600;
+		border: none;
+		border-radius: 6px;
+		font-size: 16px;
+	}
+
+	.addCart:hover {
+		background-color: var(--button-store-click);
+	}
+</style>
