@@ -1,3 +1,7 @@
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') controle.close();
+});
+
 const controle = {
     open() {
         window.closeWindow.style.setProperty("visibility", "visible");
@@ -41,7 +45,7 @@ const controle = {
 
         try {
             let produtos = [];
-            const carrinho = get();
+            const carrinho = this.get();
 
             if (carrinho.length === 0) {
                 produtos.push(myProduct);
@@ -67,5 +71,13 @@ const controle = {
         } catch (error) {
             console.log('addItemCart', error);
         }
+    },
+
+    addFromCookie(tag = "product-current-item") {
+        const product = getCookie(tag);
+        const jsonProduct = JSON.parse(product);
+        this.add(jsonProduct);
+        this.updateList();
+        this.open();
     }
 }

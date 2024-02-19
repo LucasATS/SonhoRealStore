@@ -1,5 +1,5 @@
 ---
-const { produtoInfo }: any = Astro.props;
+const { produtoInfo } = Astro.props;
 
 let produtoCart = {
 	id: produtoInfo?.id,
@@ -9,7 +9,11 @@ let produtoCart = {
 	image: produtoInfo?.image,
 };
 
-Astro.cookies.set("product-item", JSON.stringify(produtoCart, null));
+const valor = JSON.stringify(produtoCart, null);
+Astro.cookies.set("product-current-item", valor, {
+	encode: (s) => s,
+	maxAge: 6000,
+});
 ---
 
 <span class="container" transition:animate="fade">
@@ -34,7 +38,7 @@ Astro.cookies.set("product-item", JSON.stringify(produtoCart, null));
 				<button
 					id="addCart"
 					class="addCart"
-					onclick=""
+					onclick="controle.addFromCookie('product-current-item')"
 					>Adicionar ao Carrinho</button
 				>
 			</span>

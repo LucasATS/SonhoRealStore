@@ -21,7 +21,9 @@ export const ItemCart = ({
 		<span className="itemcart-container" id={"itemCart"}>
 			<span className="col" style={{ width: 100 + "%" }}>
 				<header className="itemcart-header">
-					<img src={image} alt={title} />
+					<span style={{ height: 80 + 'px', width: 80 + 'px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+						<img className="itemcart-img" src={image} alt={title} />
+					</span>
 					<section className="itemcart-section">
 						<h1 className="itemcart-titulo">{title}</h1>
 						<p className="itemcart-amount">Quantidade</p>

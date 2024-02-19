@@ -28,7 +28,7 @@
     -webkit-box-orient: vertical;
 }
 
-.itemcart-header img {
+.itemcart-img {
     object-fit: contain;
     margin: 10px;
     width: 70px;

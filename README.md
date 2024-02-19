@@ -40,12 +40,16 @@ Necessario tem NodeJS v20.11.0
 
 ## __🎯 METAS__
 
-- Home (Tela store)
+- Layout
   - [X] Menu de navegação superior
+  - [ ] Criar um footer
+
+- Home (Tela store)
   - [X] Itens da loja
 
 - Página de detalhes do produto
   - [X] Adicionar produto ao carrinho
+  - [X] Adicionar itens relacionados
 
 - Modal carrinho
   - [X] Listar produtos
@@ -55,6 +59,7 @@ Necessario tem NodeJS v20.11.0
   - [X] Atualizar lista sempre que adicionar um novo item
   - [X] Fazer a lista ficar no sentido decrescente
   - [ ] Remover produto do carrinho
+  - [ ] Corrigir o bug de quantidade de itens adicionado
 
 - Tela de About
   - [ ] Adicionar um .md explicando sobre o projeto
@@ -69,7 +74,7 @@ Necessario tem NodeJS v20.11.0
 
 - Responsividade
   - [ ] Suporte para mobile
-  - [ ] Suporte para diferentes telas
+  - [ ] Suporte para diferentes tamanhos de telas
 
 <!--
 ## __❤ AGRADECIMENTOS__
