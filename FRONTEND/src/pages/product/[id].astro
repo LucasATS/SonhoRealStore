@@ -1,14 +1,25 @@
 ---
 import ListaProdutos from "../../components/ListProductsCard.astro";
 import NavigationBar from "../../components/NavigationBar.astro";
+import ProdutoComponent from "../../components/Product.astro";
 import { type Produto } from "../../interfaces/interfaces";
-import Product from "../../components/Product.astro";
 import Layout from "../../layouts/Layout.astro";
 import { getProduto } from "../../util/api";
 
 const { id } = Astro.params;
 
-let produtoInfo: Produto;
+let produtoInfo: Produto = {
+	id: 0,
+	title: "",
+	price: 0,
+	description: "",
+	category: "",
+	image: "",
+	rating: {
+		rate: 0,
+		count: 0,
+	},
+};
 produtoInfo = await getProduto(id);
 if (!produtoInfo) return Astro.redirect("/404");
 ---
@@ -16,7 +27,7 @@ if (!produtoInfo) return Astro.redirect("/404");
 <Layout title={"Sonho Real - " + produtoInfo?.title}>
 	<NavigationBar />
 
-	<Product client:idle produtoInfo={produtoInfo} />
+	<ProdutoComponent produtoInfo={produtoInfo} />
 
 	<ListaProdutos
 		category={produtoInfo?.category}

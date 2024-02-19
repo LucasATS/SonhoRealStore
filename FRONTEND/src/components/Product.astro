@@ -1,23 +1,18 @@
 ---
-const { produtoInfo } = Astro.props;
+const { produtoInfo }: any = Astro.props;
 
-const jsonProdutoInfo = JSON.stringify(
-	{
-		id: produtoInfo?.id,
-		amount: 1,
-		price: produtoInfo?.price,
-		title: produtoInfo?.title,
-		image: produtoInfo?.image,
-	},
-	null,
-);
+let produtoCart = {
+	id: produtoInfo?.id,
+	amount: 1,
+	price: produtoInfo?.price,
+	title: produtoInfo?.title,
+	image: produtoInfo?.image,
+};
+
+Astro.cookies.set("product-item", JSON.stringify(produtoCart, null));
 ---
 
-<span-produto
-	class="container"
-	data-product={jsonProdutoInfo}
-	transition:animate="fade"
->
+<span class="container" transition:animate="fade">
 	<span class="product-container row">
 		<div class="image">
 			<img src={produtoInfo?.image} alt={produtoInfo?.title} />
@@ -36,67 +31,17 @@ const jsonProdutoInfo = JSON.stringify(
 				</span>
 			</div>
 			<span class="row" style="justify-content: right;">
-				<button id="addCart" class="addCart" onclick="controle.open()"
+				<button
+					id="addCart"
+					class="addCart"
+					onclick=""
 					>Adicionar ao Carrinho</button
 				>
 			</span>
 			<p class="description">{produtoInfo?.description}</p>
 		</div>
 	</span>
-</span-produto>
-
-<script is:inline src="/cookies.js"></script>
-<script>
-	declare global {
-		interface Window {
-			cart: any;
-		}
-	}
-
-	class spanProduto extends HTMLElement {
-		constructor() {
-			super();
-
-			const myProduct = JSON.parse(this.dataset.product as any);
-
-			const btnAddCart = document.getElementById("addCart");
-
-			const addCookie = (item: any[]) => {
-				setCookie("cart", JSON.stringify(item, null), 15);
-			};
-
-			let produtos: any[] = [];
-			const handleAddCart = () => {
-				const cookies = getCookie("cart");
-				const carrinho = JSON.parse(cookies || "[]");
-
-				if (carrinho.length === 0) {
-					produtos.push(myProduct);
-					addCookie(produtos);
-				} else {
-					produtos = carrinho;
-					const index = produtos.findIndex(
-						(item) => item.id === myProduct.id,
-					);
-					if (index !== -1) {
-						produtos[index] = {
-							...produtos[index],
-							amount: Number(produtos[index].amount) + 1,
-						};
-					} else {
-						produtos.push(myProduct);
-					}
-					addCookie(produtos);
-				}
-				// console.log("Cart:", JSON.stringify(produtos, null, 2));
-			};
-
-			btnAddCart?.addEventListener("click", handleAddCart);
-		}
-	}
-
-	customElements.define("span-produto", spanProduto);
-</script>
+</span>
 
 <style>
 	.container {

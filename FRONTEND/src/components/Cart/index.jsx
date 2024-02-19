@@ -11,14 +11,14 @@ export const Cart = () => {
 	useEffect(() => {
 		handleUpdate();
 
-		window.addEventListener(EVENT_TAG, handleUpdate);
+		window.addEventListener(EVENT_TAG, () => { handleUpdate(); console.log('lista atualizada'); });
 
 		const intervalId = setInterval(() => {
 			handleUpdate();
 		}, 500);
 
 		return () => {
-			window.removeEventListener(EVENT_TAG, handleUpdate);
+			window.removeEventListener(EVENT_TAG, () => { handleUpdate(); console.log('lista atualizada'); });
 			clearInterval(intervalId);
 		};
 	}, []);
@@ -46,7 +46,7 @@ export const Cart = () => {
 							listCartItems.reverse().map((item, index) => (
 								<ItemCart
 									key={index}
-									id={item?.id}
+									// id={item?.id}
 									image={item?.image}
 									title={item?.title}
 									price={item?.price}

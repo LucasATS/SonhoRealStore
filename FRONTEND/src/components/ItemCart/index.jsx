@@ -2,18 +2,19 @@ import { useState } from "react";
 import "./ItemCart.css";
 
 export const ItemCart = ({
-	id = -1,
+	// id = -1,
 	image = "",
 	title = "",
 	amount = 1,
 	price = 0,
 }) => {
-	const [inputValue, setInputValue] = useState(amount);
+	const [inputAmount, setInputAmount] = useState(amount);
 	const [myPrice, setMyPrice] = useState(price * amount);
 
 	const handleUpdateValue = (e) => {
-		const value = e.target.value;
-		setMyPrice(price * value);
+		const myAmount = e.target.value;
+		setInputAmount(myAmount);
+		setMyPrice(price * myAmount);
 	}
 
 	return (
@@ -25,7 +26,7 @@ export const ItemCart = ({
 						<h1 className="itemcart-titulo">{title}</h1>
 						<p className="itemcart-amount">Quantidade</p>
 						<span className="itemcart-detalhe">
-							<input className="itemcart-input" type="number" min="1" onChange={(e) => handleUpdateValue(e)} defaultValue={inputValue} />
+							<input className="itemcart-input" type="number" min="1" onChange={(e) => handleUpdateValue(e)} defaultValue={inputAmount} />
 							<p className="itemcart-p">R$ {myPrice.toFixed(2)}</p>
 						</span>
 					</section>
