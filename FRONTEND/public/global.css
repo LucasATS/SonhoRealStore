@@ -1,0 +1,118 @@
+:root {
+    --color-black: rgb(0, 0, 0);
+    --color-black-click: rgb(125, 125, 125);
+    --principal: rgb(255, 255, 255);
+    --background: rgb(243, 243, 243);
+
+    --button-store: #4caf50;
+    --button-store-click: #45a049;
+
+    --blackout: rgba(0, 0, 0, 0.1);
+}
+
+html {
+    font-family: system-ui, sans-serif;
+    background: var(--background);
+}
+
+code,
+a {
+    text-decoration: none;
+    font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+}
+
+.gap-12 {
+    gap: 12px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.aviso {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    background-color: var(--principal);
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    opacity: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.aviso button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.aviso p,
+.aviso-cookies p {
+    margin: 0;
+    color: var(--color-black);
+    font-weight: bold;
+    height: min-content;
+    text-align: left;
+    font-size: 16px;
+}
+
+.aviso-cookies {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    z-index: 30;
+    background-color: var(--principal);
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.12);
+}
+
+.aviso-cookies button {
+    background-color: var(--color-black);
+    border: none;
+    color: var(--principal);
+    padding: 6px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition-duration: 0.1s;
+}
+
+.aviso-cookies button:hover {
+    background-color: var(--color-black-click);
+    /* Cor de fundo ao passar o mouse */
+}
