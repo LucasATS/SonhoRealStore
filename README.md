@@ -8,6 +8,8 @@ Durante a fase de configuração do ambiente, o astro já cuida de tudo. É muit
 
 E é lógico, que tive que usar a API View Transitions. Coisa incrível.
 
+Infelizmente tive que abandonar a ideia de utilizar o Cart como modal. Já que inicialmente eu desenvolvi o projeto inteiro usando apenas arquivo astro, se tivesse iniciado com React teria conseguido criar algo dinamico. Então tive todo o trabalho de rescrever o código em React.
+
 ## Ajude-nos, a melhorar o site 🤩❤️
 
 FEITO POR [LucasATS](https://github.com/LucasATS)
@@ -45,21 +47,29 @@ Necessario tem NodeJS v20.11.0
 - Página de detalhes do produto
   - [X] Adicionar produto ao carrinho
 
-- Menu Lateral Direito (menu de carrinho)
+- Modal carrinho
   - [X] Listar produtos
   - [X] Criar componente dos produtos
   - [X] Alterar quantidade e valor do produto
   - [X] Abrir e fechar modal via comando
-  - [ ] Atualizar lista sempre que adicionar um novo item
+  - [X] Atualizar lista sempre que adicionar um novo item
+  - [X] Fazer a lista ficar no sentido decrescente
   - [ ] Remover produto do carrinho
 
 - Tela de About
+  - [ ] Adicionar um .md explicando sobre o projeto
 
 - Avisos
   - [X] Aviso de cookies
   - [X] Aviso de demo
   - [ ] Adicionar integração com cookies para não exibir mais a janela
-- [ ] Implementar SEO
+
+- SEO
+  - [ ] SEO dinamico
+
+- Responsividade
+  - [ ] Suporte para mobile
+  - [ ] Suporte para diferentes telas
 
 <!--
 ## __❤ AGRADECIMENTOS__
