@@ -16,8 +16,3 @@ function setCookie(nome = "", valor = "", minutos = 1) {
     let expires = "expires=" + data.toUTCString();
     return document.cookie = nome + "=" + valor + ";" + expires + ";path=/";
 }
-
-
-function msg(mensagem = '') {
-    console.log(mensagem);
-}
