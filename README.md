@@ -61,8 +61,8 @@ Necessario tem NodeJS v20.11.0
   - [X] Adicionar um .md explicando sobre o projeto
 
 - SEO
-  - [ ] SEO estático
-  - [ ] SEO dinamico para tela de produtos
+  - [X] SEO estático
+  - [X] SEO dinamico para tela de produtos
 
 - Responsividade
   - [X] Suporte para mobile
