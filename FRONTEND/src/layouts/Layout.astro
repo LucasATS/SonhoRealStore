@@ -25,31 +25,27 @@ const { title } = Astro.props;
 		<ViewTransitions />
 	</head>
 	<body>
-		<slot />
+		<section>
+			<article>
+				<slot />
+			</article>
+		</section>
 
 		<Cart client:only />
 
-		<!-- 		
-			<span class="aviso">
-			<p>
-				Esse site é apenas uma demonstração de loja, consulte o
-				<a href="https://github.com/LucasATS/SonhoRealStore"
-					>github do projeto</a
-				>
-			</p>
-			<button
-				onclick="document.querySelector('.aviso').style.display = 'none';"
-				>❌</button
-			>
-		</span>
-
-		<span class="aviso-cookies col">
-			<p>Utilizamos cookies de terceiros para melhorar a experiência</p>
-			<button
-				onclick="document.querySelector('.aviso-cookies').style.display = 'none';"
-				>Ok</button
-			>
-		</span> 
-	 -->
+		<footer>
+			<section class="footer-content">
+				<p>
+					Esse site é apenas uma demonstração de loja. Consulte o
+					<a href="https://github.com/LucasATS/SonhoRealStore"
+						>GitHub do projeto</a
+					>.
+				</p>
+				<p>
+					Utilizamos cookies de terceiros para melhorar a experiência
+				</p>
+			</section>
+			<div>&copy; 2024 Sonho Real Store | Desenvolvido por LucasATS</div>
+		</footer>
 	</body>
 </html>
