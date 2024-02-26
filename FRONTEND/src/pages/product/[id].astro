@@ -24,7 +24,11 @@ produtoInfo = await getProduto(id);
 if (!produtoInfo) return Astro.redirect("/404");
 ---
 
-<Layout title={"Sonho Real - " + produtoInfo?.title}>
+<Layout
+	title={"Sonho Real - " + produtoInfo?.title}
+	description={produtoInfo?.description}
+	thumbnail={produtoInfo?.image}
+>
 	<NavigationBar />
 
 	<ProdutoComponent produtoInfo={produtoInfo} />

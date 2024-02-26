@@ -1,0 +1,32 @@
+---
+import NavigationBar from "../../components/NavigationBar.astro";
+import Layout from "../../layouts/Layout.astro";
+import Sobre from "../../components/Sobre.md";
+---
+
+<Layout title="Sonho Real 👑 Store">
+	<NavigationBar />
+
+	<article class="conteudoMarkdown">
+		<Sobre />
+	</article>
+</Layout>
+
+<style>
+	.store {
+		margin-top: 50px;
+		margin-bottom: 50px;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		grid-gap: 25px;
+	}
+
+	.conteudoMarkdown {
+		margin: 20px;
+		margin-bottom: 70px;
+		padding: 16px;
+		border-radius: 8px;
+		text-align: left;
+		background-color: var(--principal);
+	}
+</style>

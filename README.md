@@ -2,13 +2,7 @@
 
 ## Uma simples loja demo feita em AstroJS com fins de treinamento
 
-Um modelo de site feito em AstroJS usando jsonplaceholder com fins de aprendizado. Eu estou gostando muito do AstroJS. O Tutorial deles é bem fácil de se entender. Embora o projeto eu tenha feito sem tedepender do tutorial.
-
-Durante a fase de configuração do ambiente, o astro já cuida de tudo. É muito fácil e tranquilo adicionar o React ou outras bibliotecas/frameworks, ele já configura para você. Entretanto, mesmo diante da velocidade e de tantas outras ferramentas disponíveis, eu continuo dando preferencia para o NextJS. Acredito que em parte deve-se ao fato de eu estar mais acostumado com um ambiente focado em React.
-
-E é lógico, que tive que usar a API View Transitions. Coisa incrível.
-
-Infelizmente tive que abandonar a ideia de utilizar o Cart como modal. Já que inicialmente eu desenvolvi o projeto inteiro usando apenas arquivo astro, se tivesse iniciado com React teria conseguido criar algo dinamico. Então tive todo o trabalho de rescrever o código em React.
+Mais detalhes em [Sobre](https://sonhorealstore.vercel.app/about).
 
 ## Ajude-nos, a melhorar o site 🤩❤️
 
@@ -44,7 +38,7 @@ Necessario tem NodeJS v20.11.0
 
 - Layout
   - [X] Menu de navegação superior
-  - [ ] Criar um footer
+  - [X] Criar um footer
 
 - Home (Tela store)
   - [X] Itens da loja
@@ -60,23 +54,19 @@ Necessario tem NodeJS v20.11.0
   - [X] Abrir e fechar modal via comando
   - [X] Atualizar lista sempre que adicionar um novo item
   - [X] Fazer a lista ficar no sentido decrescente
-  - [ ] Remover produto do carrinho
+  - [X] Remover produto do carrinho
   - [ ] Corrigir o bug de quantidade de itens adicionado
 
 - Tela de About
-  - [ ] Adicionar um .md explicando sobre o projeto
-
-- Avisos
-  - [X] Aviso de cookies
-  - [X] Aviso de demo
-  - [ ] Adicionar integração com cookies para não exibir mais a janela
+  - [X] Adicionar um .md explicando sobre o projeto
 
 - SEO
-  - [ ] SEO dinamico
+  - [ ] SEO estático
+  - [ ] SEO dinamico para tela de produtos
 
 - Responsividade
-  - [ ] Suporte para mobile
-  - [ ] Suporte para diferentes tamanhos de telas
+  - [X] Suporte para mobile
+  - [X] Suporte para diferentes tamanhos de telas
 
 <!--
 ## __❤ AGRADECIMENTOS__
