@@ -29,6 +29,18 @@ a {
         monospace;
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+
+    margin: 50px 0px 50px 0px;
+}
+
 .gap-12 {
     gap: 12px;
 }
