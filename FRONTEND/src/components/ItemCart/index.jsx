@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./ItemCart.css";
 
 export const ItemCart = ({
-	// id = -1,
+	id = -1,
 	image = "",
 	title = "",
 	amount = 1,
@@ -32,7 +32,10 @@ export const ItemCart = ({
 							<p className="itemcart-p">R$ {myPrice.toFixed(2)}</p>
 						</span>
 					</section>
-					<button className="itemcart-button">🗑️</button>
+					<div className="col">
+						<button className="itemcart-button" onClick={() => controle.remove(id)}>🗑️</button>
+						{/* <button className="itemcart-button" onClick={() => alert(id)}>🗑️</button> */}
+					</div>
 				</header>
 			</span>
 		</span>

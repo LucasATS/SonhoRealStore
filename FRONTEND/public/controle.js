@@ -73,6 +73,31 @@ const controle = {
         }
     },
 
+    remove(id = -1) {
+        const addCookie = (item) => {
+            setCookie("cart", JSON.stringify(item, null), 15);
+        };
+
+        if (id === -1) {
+            console.log('o id tem que ser um valor valido');
+            return 'o id tem que ser um valor valido';
+        }
+
+        try {
+            let produtos = this.get();
+            const index = produtos.findIndex(item => item.id === id);
+            if (index !== -1) {
+                produtos.splice(index, 1);
+                addCookie(produtos);
+            }
+            console.log("Item removido com sucesso");
+            return 'Item removido com sucesso';
+        } catch (error) {
+            console.log('remove error:', error);
+            return 'remove error: ' + error;
+        }
+    },
+
     addFromCookie(tag = "product-current-item") {
         const product = getCookie(tag);
         const jsonProduct = JSON.parse(product);

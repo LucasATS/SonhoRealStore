@@ -46,7 +46,7 @@ export const Cart = () => {
 							listCartItems.reverse().map((item, index) => (
 								<ItemCart
 									key={index}
-									// id={item?.id}
+									id={item?.id}
 									image={item?.image}
 									title={item?.title}
 									price={item?.price}

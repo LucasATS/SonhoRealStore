@@ -128,3 +128,10 @@
 .cart-footer a:hover {
     opacity: 90%;
 }
+
+
+@media (orientation: portrait) {
+    .cart-container {
+      width: 100%;
+    }
+  }
