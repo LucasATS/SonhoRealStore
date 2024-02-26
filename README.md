@@ -24,6 +24,8 @@ ELEMENTOS FORAM EXTRAIDOS DE [fake store api](https://fakestoreapi.com/) e [Astr
 
 Necessario tem NodeJS v20.11.0
 
+  cd FRONTEND
+
 > gitclone:
 
     git clone https://github.com/LucasATS/SonhoRealStore.git
