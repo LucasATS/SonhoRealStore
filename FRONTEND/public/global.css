@@ -50,6 +50,11 @@ footer {
     flex-direction: row;
 }
 
+.row-auto {
+    display: flex;
+    flex-direction: row;
+}
+
 .col {
     display: flex;
     flex-direction: column;
@@ -127,4 +132,10 @@ footer {
 .aviso-cookies button:hover {
     background-color: var(--color-black-click);
     /* Cor de fundo ao passar o mouse */
+}
+
+@media (orientation: portrait) {
+    .row-auto {
+        flex-direction: column;
+    }
 }

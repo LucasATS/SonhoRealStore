@@ -25,7 +25,9 @@ Astro.cookies.set("product-current-item", valor, {
 		<div class="col">
 			<span class="row gap-12">
 				<h1 class="title">{produtoInfo?.title}</h1>
-				<p class="label">{produtoInfo?.category}</p>
+				<p class="label" style="min-width: 120px;">
+					{produtoInfo?.category}
+				</p>
 			</span>
 			<div class="details">
 				<p class="price">R$ {produtoInfo?.price.toFixed(2)}</p>
@@ -110,6 +112,7 @@ Astro.cookies.set("product-current-item", valor, {
 	.label {
 		background-color: var(--color-black);
 		color: var(--principal);
+		text-align: center;
 	}
 
 	.addCart {
@@ -125,5 +128,17 @@ Astro.cookies.set("product-current-item", valor, {
 
 	.addCart:hover {
 		background-color: var(--button-store-click);
+	}
+
+	@media (orientation: portrait) {
+		.product-container {
+			justify-content: center;
+			align-items: center;
+
+			flex-direction: column;
+			max-width: none;
+
+			padding: 12px;
+		}
 	}
 </style>
