@@ -15,7 +15,7 @@
 		</ul>
 		<ul class="menu">
 			<li>
-				<a onclick="controle.open()" title="Abir carrinho">🛒 Carrinho</a>
+				<a onclick="controle.open()" title="Abir Carrinho">🛒</a>
 			</li>
 		</ul>
 	</nav>
@@ -44,6 +44,21 @@
 		flex-direction: row;
 	}
 
+	.menu a {
+		text-align: center;
+		font-size: 18px;
+		padding: 0;
+		margin: 0;
+	}
+	.menu li {
+		height: 21px;
+		width: 21px;
+		background-color: #ffffff;
+	}
+	.menu li:hover {
+		background-color: #dedede;
+	}
+
 	ul {
 		list-style-type: none;
 		margin: 0;
@@ -52,6 +67,8 @@
 
 	li {
 		text-decoration: none;
+		border-radius: 8px;
+		cursor: pointer;
 		margin: 12px;
 		padding: 6px;
 		outline: none;
@@ -59,7 +76,6 @@
 
 	li:hover {
 		background-color: #3b3b3b;
-		border-radius: 8px;
 	}
 
 	h1 {
