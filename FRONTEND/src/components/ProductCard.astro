@@ -8,9 +8,9 @@ const { image, title, price, product_id, count } = Astro.props;
 	<div class="details">
 		<h1 class="title">{title}</h1>
 	</div>
-	<div class="details2">
+	<div class="row-auto details2">
 		<p class="price">R$ {price.toFixed(2)}</p>
-		<p>{count} vendidos</p>
+		<p class="amount">{count} vendidos</p>
 	</div>
 </a>
 
@@ -45,16 +45,12 @@ const { image, title, price, product_id, count } = Astro.props;
 	.details2 {
 		margin: 5px;
 		text-align: left;
-		display: flex;
-		flex-direction: column;
 		justify-content: left;
 	}
 
 	.details2 {
 		margin-top: auto;
-		flex-direction: row;
 		justify-content: space-between;
-		align-items: flex-end;
 	}
 
 	.title {
@@ -91,5 +87,29 @@ const { image, title, price, product_id, count } = Astro.props;
 	}
 	.product-card:active {
 		outline: var(--color-black-click) solid 2px;
+	}
+
+	@media (orientation: portrait) {
+		.product-card {
+			width: 160px;
+			height: 200px;
+		}
+
+		.title {
+			font-size: 12px;
+		}
+
+		.price {
+			font-size: 12px;
+		}
+
+		img {
+			width: 140px;
+			height: 140px;
+		}
+
+		.amount {
+			visibility: hidden;
+		} 
 	}
 </style>
