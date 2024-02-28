@@ -19,12 +19,13 @@ const {
 <html lang="pt-br">
 	<head>
 		<!-- Primary Meta Tags -->
-		<link rel="shortcut icon" href="https://raw.githubusercontent.com/LucasATS/LucasATS/main/src/img/cartoon1.png" type="image/x-icon" />
+		<title>{title}</title>
 		<meta charset="UTF-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="theme-color" content="#FFF" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>{title}</title>
+		<link rel="shortcut icon" href="https://raw.githubusercontent.com/LucasATS/LucasATS/main/src/img/cartoon1.png" type="image/x-icon" />
+
 
 		<!-- APP MOBILE -->
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -55,6 +56,27 @@ const {
 		<meta property="twitter:description" content={description}>
 		<meta property="twitter:image" content={thumbnail} style="object-fit: contain;">
 
+
+		<!-- ANALISE -->
+		<meta name="google-site-verification" content="B5m5aaAAyEyXEBxdVAn7SsuDNCooZ7Gr_djlXRp49dA" />
+		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-7X8WQTPB25"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-7X8WQTPB25');
+		</script>
+		<script is:inline>
+			(function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				h._hjSettings={hjid:3885228,hjsv:6};
+				a=o.getElementsByTagName('head')[0];
+				r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
+		
 
 		<!-- PACOTE INTERNO -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
