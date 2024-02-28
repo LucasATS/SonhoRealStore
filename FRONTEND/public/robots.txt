@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /cookies.js
+Disallow: /global.css
+Disallow: /controle.js
+Sitemap: https://sonhorealstore.vercel.app/sitemap.xml
